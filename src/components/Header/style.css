@@ -1,0 +1,14 @@
+.customTextAnimation{
+  display: inline-block;
+}
+.customTextAnimation:hover {
+  -webkit-animation: rubberBand 1s;
+  animation: rubberBand 1s;
+}
+.title{
+  font-size: 3rem;
+}
+.text{
+  font-size: 1.25rem;
+  margin-top: 0;
+}
