@@ -9,6 +9,12 @@
   font-size: 3rem;
 }
 .text{
-  font-size: 1.25rem;
+  font-size: 1.45rem;
   margin-top: 0;
+}
+
+.scrollAnimation{
+    animation: heartBeat 3s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
 }

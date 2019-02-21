@@ -1,5 +1,8 @@
+html{
+scroll-behavior: smooth;
+}
 body{
   margin: 0px;
   padding: 0px;
-  background-image: linear-gradient(120deg, #2c3e50, #333);
+  background-image:radial-gradient(bottom, #262a36, #101218);
 }
