@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div style={styles.container}>
       <div><h1 className="title" style={styles.title}>Hello !</h1></div>
-      <div><p className="text" style={styles.text}>Developpeur <p className="customTextAnimation" style={styles.webMobile}>Web</p> && <p className="customTextAnimation" style={styles.webMobile}>Mobile</p></p></div>
+      <div><p className="text" style={styles.text}>Developpeur <span className="customTextAnimation" style={styles.webMobile}>Web</span> && <span className="customTextAnimation" style={styles.webMobile}>Mobile</span></p></div>
       <div className="scrollAnimation" style={styles.img}><a href="#AboutMe" ><img src={require('./scroll.png')} width="32"/></a></div>
     </div>
   )

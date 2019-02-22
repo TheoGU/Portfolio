@@ -1,5 +1,19 @@
+.block{
+  border: 1px solid #333;
+  cursor: pointer;
+}
+
+.block:hover{
+  border: 1px solid #25CCF7;
+  -webkit-filter: brightness(0.30);
+  filter: brightness(0.30);
+}
+
+
+
+
 @media screen and (max-width: 640px) {
   .block{
-    background-color: red;
+    background-color: white;
   }
 }

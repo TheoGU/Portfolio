@@ -1,24 +1,28 @@
 import React from 'react'
 import './style.css'
 
+import monon from './img/mont.jpg';
+
+
 const Project = (props) => {
   return (
     <div style={styles.container}>
-      <div className="block" style={styles.block}><p>ok</p></div>
-      <div className="block" style={styles.block}><p>ok</p></div>
-      <div className="block" style={styles.block}><p>ok</p></div>
-      <div className="block" style={styles.block}><p>ok</p></div>
-      <div className="block" style={styles.block}><p>ok</p></div>
-      <div className="block" style={styles.block}><p>ok</p></div>
-      <div className="block" style={styles.block}><p>ok</p></div>
-      <div className="block" style={styles.block}><p>ok</p></div>
-      <div className="block" style={styles.block}><p>ok</p></div>
-      <div className="block" style={styles.block}><p>ok</p></div>
+      <div className="block" onClick={()=>(alert('ok'))}style={styles.block}></div>
+      <div className="block" onClick={()=>(alert('ok'))}style={styles.block}></div>
+      <div className="block" onClick={()=>(alert('ok'))}style={styles.block}></div>
+      <div className="block" onClick={()=>(alert('ok'))}style={styles.block}></div>
+      <div className="block" onClick={()=>(alert('ok'))}style={styles.block}></div>
+      <div className="block" onClick={()=>(alert('ok'))}style={styles.block}></div>
+      <div className="block" onClick={()=>(alert('ok'))}style={styles.block}></div>
+      <div className="block" onClick={()=>(alert('ok'))}style={styles.block}></div>
+      <div className="block" onClick={()=>(alert('ok'))}style={styles.block}></div>
+      <div className="block" onClick={()=>(alert('ok'))}style={styles.block}></div>
     </div>
   )
 }
 
 export default Project
+
 
 const styles = {
   container:{
@@ -35,7 +39,9 @@ const styles = {
   block:{
     width:200,
     height:200,
-    border: `1px solid orange`,
-    margin:10
-  }
+    margin:10,
+    backgroundImage:`url(${monon})`,
+    backgroundSize: 'cover'
+  },
+
 }

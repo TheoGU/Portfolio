@@ -41,6 +41,8 @@ const styles = {
     height: `100vh`,
     alignItems:'center',
     justifyContent:'flex-end',
+    borderRight: `1px dashed #95afc0`,
+
 
   },
   description:{
