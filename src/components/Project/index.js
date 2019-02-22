@@ -28,7 +28,7 @@ const styles = {
   container:{
     display:'flex',
     flexWrap: 'wrap',
-    height: `100vh`,
+    minHeight: `100vh`,
     border: `1px solid #55efc4`,
     justifyContent:'space-around',
     alignItems:'center',

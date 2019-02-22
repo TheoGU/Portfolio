@@ -21,7 +21,7 @@ const styles = {
     flexDirection:'column',
     justifyContent:'center',
     alignItems:'center',
-    height: `100vh`,
+    minHeight: `100vh`,
     border: `1px solid #55efc4`,
     lineHeight:0,
   },

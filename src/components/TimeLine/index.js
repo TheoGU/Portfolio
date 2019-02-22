@@ -3,7 +3,33 @@ import React from 'react'
 const TimeLine = (props) => {
   return (
     <div style={styles.container}>
-      <h1>TimeLine</h1>
+      <div style={styles.date}>
+        <div style={styles.circle}>
+          <p>2019</p>
+        </div>
+        <div style={styles.circle}>
+          <p>2017</p>
+        </div>
+        <div style={styles.circle}>
+          <p>2016</p>
+        </div>
+
+      </div>
+
+
+      <div style={styles.info}>
+        <div style={styles.rect}>
+          <p>Woua</p>
+        </div>
+        <div style={styles.rect}>
+          <p>Woua</p>
+        </div>
+        <div style={styles.rect}>
+          <p>Woua</p>
+        </div>
+
+      </div>
+
     </div>
   )
 }
@@ -12,8 +38,46 @@ export default TimeLine
 
 const styles = {
   container:{
-    height: `100vh`,
-    border: `1px solid #55efc4`
+    minHeight: `100vh`,
+    border: `1px solid #55efc4`,
+    display:'flex',
+    flexDirection: 'row',
 
+  },
+  circle:{
+    width:125,
+    height:125,
+    borderRadius:125,
+    backgroundColor:'white',
+    display:'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 10
+
+  },
+  rect:{
+    width:350,
+    height:200,
+    backgroundColor:'white',
+    display:'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius:3,
+    marginLeft: 10,
+    marginTop:10
+  },
+  date:{
+    flex:1,
+    display:'flex',
+    borderRight: `1px dashed rgba(199, 236, 238,0.2)`,
+    justifyContent:'space-around',
+    alignItems:'flex-end',
+    flexDirection:'column',
+  },
+  info:{
+    flex:1,
+    display:'flex',
+    justifyContent:'space-around',
+    flexDirection:'column',
   }
 }

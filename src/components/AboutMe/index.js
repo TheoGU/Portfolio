@@ -6,7 +6,7 @@ class About extends Component {
     return (
       <div style={styles.container}>
         <div style={styles.picture}>
-          <div style={{backgroundColor: '#badc58', width: `25vw`,height: `75vh`, padding: 15, borderRadius: 4}}>
+          <div style={{backgroundColor: '#badc58', width: `25vw`,height: `75vh`,marginRight:10, padding: 15, borderRadius: 4}}>
           </div>
         </div>
         <div id="AboutMe" style={styles.description}>
@@ -31,24 +31,20 @@ const styles = {
     flexDirection:'row',
     justifyContent:'center',
     alignItems:'center',
-    height: `100vh`,
+    minHeight: `100vh`,
     border: `1px solid #55efc4`,
 
   },
   picture:{
     flex:1,
     display:'flex',
-    height: `100vh`,
     alignItems:'center',
     justifyContent:'flex-end',
-    borderRight: `1px dashed #95afc0`,
-
-
+    borderRight: `1px dashed rgba(199, 236, 238,0.2)`,
   },
   description:{
     flex:1,
     display:'flex',
-    height: `100vh`,
     flexWrap: 'wrap',
     justifyContent:'left',
     alignItems:'center',
