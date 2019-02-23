@@ -1,26 +1,25 @@
 import React from 'react'
 import './style.css'
 
-import monon from './img/mont.jpg';
+import Popup from './Popup'
 
 
-const Project = (props) => {
-  return (
-    <div style={styles.container}>
-      <div className="block" onClick={()=>(alert('ok'))}style={styles.block}></div>
-      <div className="block" onClick={()=>(alert('ok'))}style={styles.block}></div>
-      <div className="block" onClick={()=>(alert('ok'))}style={styles.block}></div>
-      <div className="block" onClick={()=>(alert('ok'))}style={styles.block}></div>
-      <div className="block" onClick={()=>(alert('ok'))}style={styles.block}></div>
-      <div className="block" onClick={()=>(alert('ok'))}style={styles.block}></div>
-      <div className="block" onClick={()=>(alert('ok'))}style={styles.block}></div>
-      <div className="block" onClick={()=>(alert('ok'))}style={styles.block}></div>
-      <div className="block" onClick={()=>(alert('ok'))}style={styles.block}></div>
-      <div className="block" onClick={()=>(alert('ok'))}style={styles.block}></div>
-    </div>
-  )
+
+
+class Project extends React.Component {
+
+  render() {
+    return (
+      <div style={styles.container}>
+        <Popup title="un" content="premier"/>
+        <Popup title="deux" content="deuxieme"/>
+        <Popup title="trois" content="troisieme"/>
+        <Popup title="quatre" content="quatrieme"/>
+        <Popup title="cinq" content="cinquieme"/>
+      </div>
+    )
+  }
 }
-
 export default Project
 
 
@@ -29,19 +28,12 @@ const styles = {
     display:'flex',
     flexWrap: 'wrap',
     minHeight: `100vh`,
-    border: `1px solid #55efc4`,
     justifyContent:'space-around',
     alignItems:'center',
     alignContent:'center',
     paddingLeft:50,
     paddingRight:50,
   },
-  block:{
-    width:200,
-    height:200,
-    margin:10,
-    backgroundImage:`url(${monon})`,
-    backgroundSize: 'cover'
-  },
+
 
 }

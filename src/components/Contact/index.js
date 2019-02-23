@@ -1,9 +1,20 @@
 import React from 'react'
+import './style.css';
+import {APP_COLORS} from '../../Style/Colors'
 
 const Contact = (props) => {
   return (
     <div style={styles.container}>
-      <h1>Contact</h1>
+      <div style={styles.form}>
+        <h2 style={styles.text}>Proposez moi vos projet </h2>
+        <form>
+          <input type="mail"/>
+          <input type="text"/>
+          <input type="text"/>
+          <textarea></textarea>
+        </form>
+      </div>
+      <div style={styles.carte}></div>
     </div>
   )
 }
@@ -12,8 +23,28 @@ export default Contact
 
 const styles = {
   container:{
-    height: `100vh`,
-    border: `1px solid #55efc4`
+    minHeight: `100vh`,
+    display:'flex',
+    flexDirection:'row',
+  },
+  form:{
+    border: `1px solid red`,
+    display:'flex',
+    flex:1,
+    height:`100vh`,
+    width:`50vw`,
+    justifyContent:'center',
+    alignItems:'center',
+    flexDirection:'column'
+  },
+  carte:{
+    border: `1px solid orange`,
 
+    flex:1,
+    height:`100vh`,
+    width:`50vw`
+  },
+  text:{
+    color:APP_COLORS.primaryText
   }
 }

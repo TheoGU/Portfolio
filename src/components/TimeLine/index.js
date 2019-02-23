@@ -39,7 +39,6 @@ export default TimeLine
 const styles = {
   container:{
     minHeight: `100vh`,
-    border: `1px solid #55efc4`,
     display:'flex',
     flexDirection: 'row',
 

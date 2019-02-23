@@ -13,7 +13,5 @@ export default Competence
 const styles = {
   container:{
     height: `100vh`,
-    border: `1px solid #55efc4`
-
   }
 }

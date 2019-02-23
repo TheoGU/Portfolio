@@ -2,11 +2,14 @@ import React from 'react'
 import './style.css'
 import {APP_COLORS} from '../../Style/Colors'
 
+const hello = ['Hello !', 'Bonjour !', 'Hi !'];
 const Header = () => {
   return (
     <div style={styles.container}>
-      <div><h1 className="title" style={styles.title}>Hello !</h1></div>
-      <div><p className="text" style={styles.text}>Developpeur <span className="customTextAnimation" style={styles.webMobile}>Web</span> && <span className="customTextAnimation" style={styles.webMobile}>Mobile</span></p></div>
+      <div><h1 className="title" style={styles.title}>
+        {hello[0]}
+      </h1></div>
+      <div><p className="text" style={styles.text}>Developpeur <span className="customTextAnimation" style={styles.webMobile}>Web</span> & <span className="customTextAnimation" style={styles.webMobile}>Mobile</span></p></div>
       <div className="scrollAnimation" style={styles.img}><a href="#AboutMe" ><img src={require('./scroll.png')} width="32"/></a></div>
     </div>
   )
@@ -22,7 +25,6 @@ const styles = {
     justifyContent:'center',
     alignItems:'center',
     minHeight: `100vh`,
-    border: `1px solid #55efc4`,
     lineHeight:0,
   },
   webMobile:{
