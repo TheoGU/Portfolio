@@ -47,6 +47,8 @@ const styles = {
     alignContent:'center',
     paddingLeft:50,
     paddingRight:50,
+    flexWrap:'wrap'
+    
   },
   text:{
     color: APP_COLORS.primaryText

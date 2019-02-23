@@ -34,7 +34,8 @@ const styles = {
     width:`50vw`,
     justifyContent:'center',
     alignItems:'center',
-    flexDirection:'column'
+    flexDirection:'column',
+    
   },
   carte:{
     flex:1,
