@@ -1,5 +1,6 @@
 import React from 'react'
 import './style.css'
+import {APP_COLORS} from '../../Style/Colors'
 
 import Popup from './Popup'
 
@@ -14,11 +15,14 @@ class Project extends React.Component {
   render() {
     return (
       <div style={styles.container}>
-        <Popup title="un" content="premier" back={appCalc} />
-        <Popup title="deux" content="deuxieme" back={cat} />
-        <Popup title="trois" content="troisieme" back={mil} />
-        <Popup title="quatre" content="quatrieme" back={monon} />
-        <Popup title="cinq" content="cinquieme" back={monon} />
+          <h2 style={styles.text}>MES PROJET</h2>
+          <div style={styles.content}>
+            <Popup title="un" content="premier" back={appCalc} />
+            <Popup title="deux" content="deuxieme" back={cat} />
+            <Popup title="trois" content="troisieme" back={mil} />
+            <Popup title="quatre" content="quatrieme" back={monon} />
+            <Popup title="cinq" content="cinquieme" back={monon} />
+          </div>
       </div>
     )
   }
@@ -31,12 +35,22 @@ const styles = {
     display:'flex',
     flexWrap: 'wrap',
     minHeight: `100vh`,
+    justifyContent:'center',
+    alignItems:'flex-start',
+
+  },
+
+  content:{
+    display:'flex',
     justifyContent:'space-around',
     alignItems:'center',
     alignContent:'center',
     paddingLeft:50,
     paddingRight:50,
   },
+  text:{
+    color: APP_COLORS.primaryText
+  }
 
 
 }

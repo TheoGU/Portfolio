@@ -1,13 +1,12 @@
 import React from 'react'
 import DateTimeline from './Date'
+import InfoTimeline from './Info'
 
 const TimeLine = (props) => {
   return (
     <div style={styles.container}>
-
       <DateTimeline/>
-
-
+      <InfoTimeline/>
     </div>
   )
 }

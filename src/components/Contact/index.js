@@ -28,7 +28,6 @@ const styles = {
     flexDirection:'row',
   },
   form:{
-    border: `1px solid red`,
     display:'flex',
     flex:1,
     height:`100vh`,
@@ -38,8 +37,6 @@ const styles = {
     flexDirection:'column'
   },
   carte:{
-    border: `1px solid orange`,
-
     flex:1,
     height:`100vh`,
     width:`50vw`
