@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import Modal from 'react-awesome-modal';
 import '../style.css'
-import monon from '../img/mont.jpg';
-
 
 
 export default class Popup extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            visible : false
+            visible : false,
         }
     }
 
@@ -26,9 +24,17 @@ export default class Popup extends Component {
     }
 
     render() {
+
         return (
             <section>
-                <div className="block" style={styles.block} onClick={() => this.openModal()}></div>
+                <div className="block" style={{
+                  width:200,
+                  height:200,
+                  margin:10,
+                  backgroundSize: 'cover',
+                  backgroundImage:`url(${this.props.back})`
+                  }}
+                  onClick={() => this.openModal()}></div>
 
                 <Modal
                     visible={this.state.visible}
@@ -50,6 +56,7 @@ export default class Popup extends Component {
             </section>
         );
     }
+
 }
 
 const styles = {
@@ -62,13 +69,7 @@ const styles = {
     alignContent:'center',
     paddingLeft:50,
     paddingRight:50,
-  },
-  block:{
-    width:200,
-    height:200,
-    margin:10,
-    backgroundImage:`url(${monon})`,
-    backgroundSize: 'cover'
-  },
+  }
+
 
 }

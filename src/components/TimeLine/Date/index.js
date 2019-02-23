@@ -1,26 +1,25 @@
 import React from 'react'
-import DateTimeline from './Date'
 
-const TimeLine = (props) => {
+const DateTimeline = (props) => {
   return (
-    <div style={styles.container}>
-
-      <DateTimeline/>
-
-
-    </div>
+      <div style={styles.date}>
+        <div style={styles.circle}>
+          <p>2019</p>
+        </div>
+        <div style={styles.circle}>
+          <p>2017</p>
+        </div>
+        <div style={styles.circle}>
+          <p>2016</p>
+        </div>
+      </div>
   )
 }
 
-export default TimeLine
+export default DateTimeline
 
 const styles = {
-  container:{
-    minHeight: `100vh`,
-    display:'flex',
-    flexDirection: 'row',
 
-  },
   circle:{
     width:125,
     height:125,
@@ -30,21 +29,13 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     marginRight: 10
-
   },
-
   date:{
     flex:1,
     display:'flex',
     borderRight: `1px dashed rgba(199, 236, 238,0.2)`,
     justifyContent:'space-around',
     alignItems:'flex-end',
-    flexDirection:'column',
-  },
-  info:{
-    flex:1,
-    display:'flex',
-    justifyContent:'space-around',
     flexDirection:'column',
   }
 }
