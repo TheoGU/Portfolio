@@ -13,15 +13,54 @@ import mil from './img/mil.jpeg';
 class Project extends React.Component {
 
   render() {
+    const pop = [
+      {
+        title:'un',
+        content:'premier',
+        back:appCalc,
+        resumer:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        link:'https://www.google.com'
+      },
+      {
+        title:'deux',
+        content:'deuxieme',
+        back:cat,
+        resumer:'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        link:'https://www.facebook.com'
+      },
+      {
+        title:'troi',
+        content:'troisieme',
+        back:mil,
+        resumer:'Lorem ipsumnt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        link:'https://theoguinebertier.com/'
+      },
+      {
+        title:'quatre',
+        content:'quatrieme',
+        back:monon,
+        resumer:'lit anim id est laborum.',
+        link:'https://www.data.theoguinebertier.com'
+      },
+      {
+        title:'cinq',
+        content:'cinquieme',
+        back:monon,
+        resumer:'iquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        link:'http://www.guinebertier.com/'
+      },
+    ]
+
     return (
       <div style={styles.container}>
           <h2 style={styles.text}>MES PROJET</h2>
           <div style={styles.content}>
-            <Popup title="un" content="premier" back={appCalc} />
-            <Popup title="deux" content="deuxieme" back={cat} />
-            <Popup title="trois" content="troisieme" back={mil} />
-            <Popup title="quatre" content="quatrieme" back={monon} />
-            <Popup title="cinq" content="cinquieme" back={monon} />
+          {
+            pop.map( elt => (
+              <Popup title={elt.title} content={elt.content} back={elt.back} resumer={elt.resumer} link={elt.link}/>
+            )
+          )
+          }
           </div>
       </div>
     )
@@ -48,7 +87,7 @@ const styles = {
     paddingLeft:50,
     paddingRight:50,
     flexWrap:'wrap'
-    
+
   },
   text:{
     color: APP_COLORS.primaryText

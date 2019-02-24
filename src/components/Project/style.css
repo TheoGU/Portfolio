@@ -22,6 +22,10 @@
 }
 .modalPicture{
   background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   width: 850px;
   height:650px;
   flex: 1.7;

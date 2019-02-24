@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Modal from 'react-awesome-modal';
 import '../style.css'
+import ReactDOM from 'react-dom';
+
 
 
 export default class Popup extends Component {
@@ -23,8 +25,18 @@ export default class Popup extends Component {
         });
     }
 
-    render() {
+    componentDidMount(){
+      document.addEventListener('keyup', e => {
+        if(e.key === 'Escape'){
+          this.setState({
+              visible : false
+          });
+        }
+      })
+    }
 
+
+    render() {
         return (
             <section>
                 <div className="block" style={{
@@ -32,7 +44,7 @@ export default class Popup extends Component {
                   height:200,
                   margin:10,
                   backgroundSize: 'cover',
-                  backgroundImage:`url(${this.props.back})`
+                  backgroundImage:`url(${this.props.back})`,
                   }}
                   onClick={() => this.openModal()}></div>
 
@@ -45,7 +57,11 @@ export default class Popup extends Component {
                 >
                     <div className="modal">
                       <div className="modalPicture">
-                      </div>
+                        <div style={{flex:3, width: `60%`, height: `60%`, backgroundColor: 'yellow', borderRadius: 20, marginTop: 20}}/>
+                        <div style={{flex:1}}>
+                          <a target="_blank" href={this.props.link}>Voir le projet</a>
+                        </div>
+                    </div>
                       <div className="modalResume">
                         <h1>{this.props.title}</h1>
                         <p>{this.props.content}</p>
