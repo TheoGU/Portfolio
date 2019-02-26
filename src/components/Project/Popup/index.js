@@ -44,7 +44,7 @@ export default class Popup extends Component {
                   height:200,
                   margin:10,
                   backgroundSize: 'cover',
-                  backgroundImage:`url(${this.props.back})`,
+                  backgroundImage:`url(${this.props.icon})`,
                   }}
                   onClick={() => this.openModal()}></div>
 
@@ -57,14 +57,15 @@ export default class Popup extends Component {
                 >
                     <div className="modal">
                       <div className="modalPicture">
-                        <div style={{flex:3, width: `60%`, height: `60%`, backgroundColor: 'yellow', borderRadius: 20, marginTop: 20}}/>
-                        <div style={{flex:1}}>
+                        <div style={{flex:3, width: `60%`, height: `60%`,border:`1px solid red`,backgroundImage:`url(${this.props.backGroundImgApercu})` , borderRadius: 20, marginTop: 20}}/>
+                        <div style={{flex:1,marginTop: 20}}>
                           <a target="_blank" href={this.props.link}>Voir le projet</a>
                         </div>
                     </div>
                       <div className="modalResume">
                         <h1>{this.props.title}</h1>
-                        <p>{this.props.content}</p>
+                        <em>{this.props.content}</em>
+                        <p>{this.props.resumer}</p>
                       </div>
                         <a className="close" href="javascript:void(0);" onClick={() => this.closeModal()}>x</a>
                     </div>

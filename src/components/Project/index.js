@@ -9,6 +9,8 @@ import appCalc from './img/appCalc.png';
 import cat from './img/cat.jpeg';
 import mil from './img/mil.jpeg';
 
+import phone from './img/phone.png'
+
 
 class Project extends React.Component {
 
@@ -17,37 +19,47 @@ class Project extends React.Component {
       {
         title:'un',
         content:'premier',
-        back:appCalc,
+        icon:appCalc,
         resumer:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        link:'https://www.google.com'
+        link:'https://www.google.com',
+        backGroundImgApercu: phone
+
       },
       {
         title:'deux',
         content:'deuxieme',
-        back:cat,
+        icon:cat,
         resumer:'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        link:'https://www.facebook.com'
+        link:'https://www.facebook.com',
+        backGroundImgApercu: phone
+
       },
       {
         title:'troi',
         content:'troisieme',
-        back:mil,
+        icon:mil,
         resumer:'Lorem ipsumnt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        link:'https://theoguinebertier.com/'
+        link:'https://theoguinebertier.com/',
+        backGroundImgApercu: phone
+
       },
       {
         title:'quatre',
         content:'quatrieme',
-        back:monon,
+        icon:monon,
         resumer:'lit anim id est laborum.',
-        link:'https://www.data.theoguinebertier.com'
+        link:'https://www.data.theoguinebertier.com',
+        backGroundImgApercu: phone
+
       },
       {
         title:'cinq',
         content:'cinquieme',
-        back:monon,
+        icon:monon,
         resumer:'iquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        link:'http://www.guinebertier.com/'
+        link:'http://www.guinebertier.com/',
+        backGroundImgApercu: phone
+
       },
     ]
 
@@ -57,7 +69,7 @@ class Project extends React.Component {
           <div style={styles.content}>
           {
             pop.map( elt => (
-              <Popup title={elt.title} content={elt.content} back={elt.back} resumer={elt.resumer} link={elt.link}/>
+              <Popup title={elt.title} content={elt.content} icon={elt.icon} resumer={elt.resumer} link={elt.link}/>
             )
           )
           }
