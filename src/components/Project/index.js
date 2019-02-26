@@ -102,7 +102,9 @@ const styles = {
 
   },
   text:{
-    color: APP_COLORS.primaryText
+    color: APP_COLORS.primaryText,
+    marginTop: 130,
+    marginBottom: -100
   }
 
 
