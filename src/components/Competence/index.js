@@ -2,7 +2,7 @@ import React from 'react'
 
 const Competence = (props) => {
   return (
-    <div style={styles.container}>
+    <div id="Skill" style={styles.container}>
       <h1>Competence</h1>
     </div>
   )

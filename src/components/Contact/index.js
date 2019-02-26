@@ -4,7 +4,7 @@ import {APP_COLORS} from '../../Style/Colors'
 
 const Contact = (props) => {
   return (
-    <div style={styles.container}>
+    <div id="Contact" style={styles.container}>
       <div style={styles.form}>
         <h2 style={styles.text}>Proposez moi vos projet </h2>
         <form>
@@ -35,7 +35,7 @@ const styles = {
     justifyContent:'center',
     alignItems:'center',
     flexDirection:'column',
-    
+
   },
   carte:{
     flex:1,

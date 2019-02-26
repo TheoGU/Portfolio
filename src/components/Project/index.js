@@ -64,7 +64,7 @@ class Project extends React.Component {
     ]
 
     return (
-      <div style={styles.container}>
+      <div id="Project" style={styles.container}>
           <h2 style={styles.text}>MES PROJET</h2>
           <div style={styles.content}>
           {

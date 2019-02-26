@@ -7,11 +7,16 @@ import Competence from './components/Competence'
 import Contact from './components/Contact'
 import AboutMe from './components/AboutMe'
 import TimeLine from './components/TimeLine'
+import NavBar from './components/NavBar'
+
 
 
 class App extends Component {
   render() {
     return (
+      <div>
+        <NavBar />
+
       <div style={style.container}>
           <Header />
           <AboutMe />
@@ -20,6 +25,8 @@ class App extends Component {
           <TimeLine />
           <Contact />
       </div>
+    </div>
+
     );
   }
 }

@@ -4,7 +4,7 @@ import InfoTimeline from './Info'
 
 const TimeLine = (props) => {
   return (
-    <div style={styles.container}>
+    <div id="TimeLine" style={styles.container}>
       <DateTimeline/>
       <InfoTimeline/>
     </div>
