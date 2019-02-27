@@ -8,13 +8,21 @@ const DateTimeline = (props) => {
           <p>2017 - 2019</p>
         </div>
         <div className="two" style={styles.rect}>
-          <p>Dut informatique alternance</p>
+          <div>
+          <p>Dut informatique en alternance | <strong>Villetaneuse</strong></p>
+          <p>Université Paris 13</p>
+          <p><strong>Alternance : </strong>CCE Banque de France</p>
+          </div>
         </div>
         <div className="three" style={styles.circle}>
-          <p>2014 - 2017</p>
+          <p>2014</p>
         </div>
         <div className="four" style={styles.rect}>
-          <p>Stage SVP</p>
+          <div>
+          <p>Lycée de la Tourelle | <strong>Sarcelles</strong></p>
+          <p>Bac <strong>STI2D</strong> option SIN</p>
+          <p><strong>Mention :</strong> Bien</p>
+          </div>
         </div>
       </div>
   )
