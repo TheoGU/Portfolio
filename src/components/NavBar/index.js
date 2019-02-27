@@ -7,7 +7,7 @@ const NavBar = (props) => {
   return (
     <div style={styles.container}>
     <div style={styles.itemLeft} className="item">
-      <a style={styles.link} href="#">Accueil</a>
+      <a style={styles.link} href="#Header">Accueil</a>
     </div>
     <div style={styles.itemLeft} className="item">
       <a style={styles.link} href="#AboutMe">A propos</a>

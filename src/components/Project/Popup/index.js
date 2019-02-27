@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Modal from 'react-awesome-modal';
 import '../style.css'
-import ReactDOM from 'react-dom';
 
 
 
@@ -59,7 +58,7 @@ export default class Popup extends Component {
                       <div className="modalPicture">
                         <div style={{flex:3, width: `60%`, height: `60%`,border:`1px solid red`,backgroundImage:`url(${this.props.backGroundImgApercu})` , borderRadius: 20, marginTop: 20}}/>
                         <div style={{flex:1,marginTop: 20}}>
-                          <a target="_blank" href={this.props.link}>Voir le projet</a>
+                          <a target="_blank" rel="noopener noreferrer" href={this.props.link}>Voir le projet</a>
                         </div>
                     </div>
                       <div className="modalResume">
@@ -67,26 +66,11 @@ export default class Popup extends Component {
                         <em>{this.props.content}</em>
                         <p>{this.props.resumer}</p>
                       </div>
-                        <a className="close" href="javascript:void(0);" onClick={() => this.closeModal()}>x</a>
+                        <button className="close" onClick={() => this.closeModal()}>x</button>
                     </div>
                 </Modal>
             </section>
         );
     }
-
-}
-
-const styles = {
-  container:{
-    display:'flex',
-    flexWrap: 'wrap',
-    minHeight: `100vh`,
-    justifyContent:'space-around',
-    alignItems:'center',
-    alignContent:'center',
-    paddingLeft:50,
-    paddingRight:50,
-  }
-
 
 }

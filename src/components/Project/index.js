@@ -69,7 +69,7 @@ class Project extends React.Component {
           <div style={styles.content}>
           {
             pop.map( elt => (
-              <Popup title={elt.title} content={elt.content} icon={elt.icon} resumer={elt.resumer} link={elt.link}/>
+              <Popup key={elt.title} title={elt.title} content={elt.content} icon={elt.icon} resumer={elt.resumer} link={elt.link}/>
             )
           )
           }
