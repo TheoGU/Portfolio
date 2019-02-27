@@ -11,7 +11,8 @@ class Contact extends Component{
       object: '',
       subject: '',
       message: false,
-      messageErreur:false
+      messageErreur:false,
+      msgContent:''
     }
   }
 
@@ -19,13 +20,14 @@ class Contact extends Component{
     if(this.state.name !== '' && this.state.email !== '' && this.state.object !== '' && this.state.subject !== ''){
       this.setState({
         message:true,
-        messageErreur: false
+        messageErreur: false,
       })
     }
     else{
       this.setState({
         message:false,
-        messageErreur: true
+        messageErreur: true,
+        msgContent: `Informations manquante !`
       })
     }
   }
@@ -53,11 +55,11 @@ class Contact extends Component{
             this.state.message ? <p style={styles.successMsg}>Votre message a été transmis !</p> : ''
           }
           {
-            this.state.messageErreur ? <p style={styles.errorMsg}>Le message n'a pas pu être transmis !</p> : ''
+            this.state.messageErreur ? <p style={styles.errorMsg}>Le message n'a pas pu être transmis !<br/>{this.state.msgContent}</p> : ''
           }
         </div>
         <div style={styles.carte}>
-<iframe title="carteSmt" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41796.00680324615!2d2.300251508991784!3d49.10088285041116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e64482344a1697%3A0x40b82c3688b2d90!2s95270+Saint-Martin-du-Tertre!5e0!3m2!1sfr!2sfr!4v1551269088715" style={{width:`100%`, height:`100%`}}></iframe>
+<iframe title="carteSmt" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41796.00680324615!2d2.300251508991784!3d49.10088285041116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e64482344a1697%3A0x40b82c3688b2d90!2s95270+Saint-Martin-du-Tertre!5e0!3m2!1sfr!2sfr!4v1551269088715" style={{border:'none',width:`100%`, height:`100%`}}></iframe>
         </div>
       </div>
     )

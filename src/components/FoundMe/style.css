@@ -1,0 +1,7 @@
+a{
+  margin: 5px;
+}
+a :hover{
+  -webkit-animation: rubberBand 1s;
+  animation: rubberBand 1s;
+}

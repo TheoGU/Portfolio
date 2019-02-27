@@ -8,6 +8,7 @@ import Contact from './components/Contact'
 import AboutMe from './components/AboutMe'
 import TimeLine from './components/TimeLine'
 import NavBar from './components/NavBar'
+import FoundMe from './components/FoundMe'
 
 
 
@@ -24,6 +25,7 @@ class App extends Component {
           <Competence />
           <TimeLine />
           <Contact />
+          <FoundMe />
       </div>
     </div>
 
