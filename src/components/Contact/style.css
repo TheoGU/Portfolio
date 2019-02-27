@@ -1,6 +1,59 @@
 
-input{
-  border:1px solid #dff9fb;
-  border-radius: 5px;
-  background-color: #dff9fb;
+input[type=text], input[type=mail]{
+  background-color: inherit;
+  border: none;
+  border-bottom: 1px solid rgba(223, 249, 251,0.7);
+  outline: none;
+  font-size: 17px;
+  color:#ecf0f1;
+  padding: 5px;
+  padding-left: 0px;
+}
+
+input:focus{
+  border-bottom: 1px solid #25CCF7;
+}
+
+textarea{
+  border:none;
+  background-color: inherit;
+  outline: none;
+  color:#ecf0f1;
+  border-bottom: 1px solid rgba(223, 249, 251,0.7);
+  padding: 5px;
+  font-size: 17px;
+  padding-left: 0px;
+  margin-left: 7px;
+
+}
+
+label{
+  color: rgba(223, 249, 251,1);
+  margin-top: 20px;
+  margin-left: 7px;
+  font-size: 20px;
+}
+
+input[type=submit]{
+  width:50%;
+  margin-top: 20px;
+  font-size: 20px;
+  border: none;
+  color: rgba(223, 249, 251,1);
+  background-color: #25CCF7;
+  border-radius: 20px;
+  margin-left: 25%;
+  outline: none;
+}
+input[type=submit]:hover{
+  color: #333;
+  background-color: rgba(223, 249, 251,1);
+  transition: all;
+  transition-duration: 1s;
+}
+
+
+input[type=submit]:active{
+  transform: translateY(100px);
+
 }
