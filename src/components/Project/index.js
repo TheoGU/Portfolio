@@ -65,7 +65,7 @@ class Project extends React.Component {
 
     return (
       <div id="Project" style={styles.container}>
-          <h2 style={styles.text}>MES PROJET</h2>
+          <h2 style={styles.text}>Mes projets</h2>
           <div style={styles.content}>
           {
             pop.map( elt => (
@@ -104,7 +104,9 @@ const styles = {
   text:{
     color: APP_COLORS.primaryText,
     marginTop: 130,
-    marginBottom: -100
+    marginBottom: -100,
+    fontFamily:'sans-serif',
+    fontWeight:100
   }
 
 

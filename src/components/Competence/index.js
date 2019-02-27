@@ -1,92 +1,112 @@
-import React from 'react'
+import React, {Component} from 'react'
+import './style.css'
+import {APP_COLORS} from '../../Style/Colors'
 
-const Competence = (props) => {
-  return (
-    <div id="Skill" style={styles.container}>
+class Competence extends Component{
 
-      <h1 style={{textAlign: 'center'}}>Competence</h1>
-      <div style={styles.cloud}>
-        <div style={{margin: 5,backgroundColor: '#1abc9c',width: `20vh`,borderRadius: 10}}>
-          <h3>Langage</h3>
-            <ul>
-              <li>JavaScript ES7</li>
-              <li>HTML 5</li>
-              <li>CSS 3</li>
-              <li>PHP 7</li>
-              <li>SQL</li>
-              <li>Java</li>
-            </ul>
-        </div>
-        <div style={{margin: 5,backgroundColor: '#8e44ad',width: `30vh`,borderRadius: 10}}>
-          <h3>Framework</h3>
-          <ul>
-            <li>React JS</li>
-            <li>React Native</li>
-            <li>Vue Js</li>
-            <li>Phalcon</li>
-            <li>Laravel</li>
-            <li>Foundation</li>
-            <li>Electron</li>
-            <li>Express JS</li>
-          </ul>
-        </div>
-        <div style={{margin: 5,backgroundColor: '#3498db',width: `20vh`,borderRadius: 10}}>
-          <h3>Cms</h3>
-            <ul>
-              <li>Wordpress</li>
-              <li>CyberCe</li>
-            </ul>
-        </div>
-        <div style={{margin: 5,backgroundColor: '#1abc9c',width: `90vh`,borderRadius: 10}}>
-          <h3>Serveur</h3>
-            <ul>
-              <li>Node JS</li>
-              <li>Nginx</li>
-              <li>MariaDB</li>
-            </ul>
-        </div>
-        <div style={{margin: 5,backgroundColor: '#8e44ad',width: `25vh`,borderRadius: 10}}>
-          <h3>Logiciel</h3>
-            <ul>
-              <li>Git</li>
-              <li>Sketch</li>
-              <li>PhotoShop</li>
-              <li>Illustrator</li>
-            </ul>
-        </div>
-        <div style={{margin: 5,backgroundColor: '#3498db',width: `40vh`,borderRadius: 10}}>
-          <h3>OS</h3>
-            <ul>
-              <li>MacOs</li>
-              <li>Windows</li>
-              <li>Debian 9</li>
-            </ul>
+
+
+  render(){
+    const colorPicker = [
+      '#12CBC4',
+      '#00b894',
+      '#74b9ff',
+      '#a29bfe',
+      '#3498db',
+      '#1abc9c'
+    ]
+    return (
+      <div id="Skill" style={styles.container}>
+
+        <h1 style={{fontWeight: 100, fontFamily: 'sans-serif',textAlign: 'center', color: APP_COLORS.primaryText}}>Compétences</h1>
+        <div style={styles.cloud}>
+
+
+          <div className="blockSkills" style={{minHeight: '45vh',backgroundColor: colorPicker[0]}}>
+            <div style={{textAlign: 'center'}}>
+              <h3>Langages</h3>
+              <p>JavaScript ES7</p>
+              <p>HTML 5</p>
+              <p>CSS 3</p>
+              <p>PHP 7</p>
+              <p>SQL</p>
+              <p>Java</p>
+            </div>
+          </div>
+
+
+          <div className="blockSkills" style={{width:`25vw`,alignSelf: 'flex-end',minHeight: '18vh', backgroundColor: colorPicker[1]}}>
+              <div style={{textAlign: 'center'}}>
+                <h3>OS</h3>
+                <p>MacOs</p>
+                <p>Windows</p>
+                <p>Debian 9</p>
+              </div>
+          </div>
+
+          <div className="blockSkills" style={{alignSelf: 'flex-end',minHeight: '30vh',backgroundColor: colorPicker[2]}}>
+              <div style={{textAlign: 'center'}}>
+                <h3>CMS</h3>
+                <p>CyberCe</p>
+                <p>WordPress</p>
+              </div>
+
+          </div>
+
+
+          <div className="blockSkills" style={{alignSelf: 'flex-end',minHeight: '26vh',backgroundColor: colorPicker[3]}}>
+              <div style={{textAlign: 'center'}}>
+                <h3>Serveur</h3>
+                <p>NodeJs</p>
+                <p>Nginx</p>
+                <p>MariaDB</p>
+              </div>
+          </div>
+
+
+          <div className="blockSkills" style={{alignSelf: 'stretch',height: '28vh',backgroundColor:colorPicker[4]}}>
+            <div style={{textAlign: 'center'}}>
+              <h3>Git</h3>
+              <p>Sketch</p>
+              <p>Photoshop</p>
+              <p>Illustrator</p>
+            </div>
+
+          </div>
+
+          <div className="blockSkills" style={{width:`25vw` ,alignSelf: 'stretch',minHeight: '40vh',backgroundColor: colorPicker[5]}}>
+            <div style={{textAlign: 'center'}}>
+              <h3>Framework</h3>
+              <p>React JS</p>
+              <p>React Native</p>
+              <p>Vue JS</p>
+              <p>Express JS</p>
+              <p>Electron</p>
+              <p>Laravel</p>
+              <p>Phalcon</p>
+              <p>Foundation</p>
+            </div>
+
+          </div>
+
         </div>
       </div>
-    </div>
-  )
-}
+    )
+  }
+
+  }
 
 export default Competence
 
 const styles = {
   container:{
     display:'flex',
-    justifyContent:'center',
-    alignItems:'center',
     flexDirection:'column',
-    minHeight: `100vh`,
+    minHeight: `133vh`,
   },
   cloud:{
     display:'flex',
-    flexDirection:'row',
     flexWrap:'wrap',
     justifyContent:'center',
-    alignContent: 'stretch'
-  },
-  tag:{
-    backgroundColor:'yellow',
-    borderRadius:10,
-    flex:1
   }
 }

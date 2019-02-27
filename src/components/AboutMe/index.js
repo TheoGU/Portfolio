@@ -11,7 +11,7 @@ class About extends Component {
         </div>
         <div style={styles.description}>
           <div style={{width: `35vw`, padding: 15}}>
-            <h2 style={styles.title}>A PROPOS</h2>
+            <h2 style={styles.title}>Qui suis-je ?</h2>
             <p style={styles.text}><strong>Hello </strong>,je m'appelle Théo Guinebertier,<br/> j'ai 19 ans et je vis en France.</p>
             <p style={styles.text}>Je suis un développeur web et mobile curieux et passionné. J'aime voyager et collaborer avec les gens. Je fais du sport et j'aime apprendre.</p>
             <p style={styles.text}>Actuellement en DUT informatique en alternance, je suis occupé à écrire du code et créer des applications sympas.</p>
@@ -54,7 +54,10 @@ const styles = {
     color: APP_COLORS.primaryText
   },
   title:{
-    color: APP_COLORS.primaryText
+    color: APP_COLORS.primaryText,
+    fontFamily:'sans-serif',
+    fontWeight:100,
+    fontSize:30
   }
 
 }
