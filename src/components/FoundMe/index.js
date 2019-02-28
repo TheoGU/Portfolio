@@ -9,7 +9,7 @@ import linkedin from './socialNetwork/linkedin.svg'
 const FoundMe = (props) => {
   return (
     <div style={styles.container}>
-    <h1 style={styles.text}>Retrouvez moi sur mes reseaux</h1>
+    <h1 style={styles.text}>Retrouvez-moi sur mes réseaux</h1>
     <div>
     <a target="_blank" rel="noopener noreferrer" href="https://github.com/theogu" ><img src={github} alt="githubLogo"/></a>
     <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/theo-guinebertier-b53504140" ><img src={linkedin} alt="linkedin"/></a>
