@@ -69,7 +69,7 @@ export default class Popup extends Component {
                               this.props.linkSource !== '' ? <a style={{textAlign: 'center',fontSize: 19,color:APP_COLORS.customText, textDecoration: 'underline', fontStyle: 'italic'}} target="_blank" rel="noopener noreferrer" href={this.props.linkSource} >Voir les sources </a> : ''
                             }
                             {
-                              this.props.private ? <p style={styles.errorMsg}>Projet privée !<br/>Bientôt disponible au grand public</p> : ''
+                              this.props.private ? <p style={styles.errorMsg}>Projet privé !<br/>Bientôt disponible au grand public</p> : ''
                             }
                           </div>
                         </div>
