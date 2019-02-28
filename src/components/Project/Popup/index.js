@@ -10,7 +10,6 @@ export default class Popup extends Component {
         super(props);
         this.state = {
             visible : false,
-            private: false,
         }
     }
 
@@ -20,18 +19,6 @@ export default class Popup extends Component {
         });
     }
 
-    handleClick() {
-      if(this.props.private){
-        this.setState({
-          private: true
-        })
-      }
-      else{
-        this.setState({
-          private: false
-        })
-      }
-    }
 
     closeModal() {
         this.setState({
@@ -76,32 +63,32 @@ export default class Popup extends Component {
                           <div style={{display: 'flex', flexDirection: 'column'}}>
 
                             {
-                              this.props.linkDemo != '' ? <a style={{color:APP_COLORS.customText, textDecoration: 'underline', fontStyle: 'italic'}} target="_blank" rel="noopener noreferrer" href={this.props.link} onClick={() => this.handleClick()} >Voir la Démonstration</a> : ''
+                              this.props.linkDemo !== '' ? <a style={{textAlign: 'center',fontSize: 19,color:APP_COLORS.customText, textDecoration: 'underline', fontStyle: 'italic'}} target="_blank" rel="noopener noreferrer" href={this.props.linkDemo} >Voir la Démonstration</a> : ''
                             }
                             {
-                              this.props.linkSource != '' ? <a style={{color:APP_COLORS.customText, textDecoration: 'underline', fontStyle: 'italic'}} target="_blank" rel="noopener noreferrer" href={this.props.link} onClick={() => this.handleClick()} >Voir les sources </a> : ''
+                              this.props.linkSource !== '' ? <a style={{textAlign: 'center',fontSize: 19,color:APP_COLORS.customText, textDecoration: 'underline', fontStyle: 'italic'}} target="_blank" rel="noopener noreferrer" href={this.props.linkSource} >Voir les sources </a> : ''
                             }
                             {
-                              this.state.private ? <p style={styles.errorMsg}>Projet privée !<br/>Bientôt disponible au grand public</p> : ''
+                              this.props.private ? <p style={styles.errorMsg}>Projet privée !<br/>Bientôt disponible au grand public</p> : ''
                             }
                           </div>
                         </div>
                     </div>
 
 
-                    <div className="modalResume" style={{padding: 20}}>
+                    <div className="modalResume" style={{paddingLeft: 10,paddingRight: 10}}>
                       <h1 style={{textAlign: 'center',color: APP_COLORS.primaryText, fontWeight: 200}}>{this.props.title}</h1>
                       <p style={{textAlign: 'center', color:'rgba(223, 249, 251,0.7)'}}>{this.props.resumer}</p>
-                      <ul style={{marginTop: 80}}>
+                      <ul>
                         <h4 style={{color: APP_COLORS.primaryText, fontWeight: 300}}>Objectifs principaux</h4>
                         {
                           this.props.obj.map(list => {
-                            return <li style={{listStyle:'none', marginLeft: 20,color:'rgba(223, 249, 251,0.7)'}}>{list}</li>
+                            return <li style={{marginTop: 10,listStyle:'none', marginLeft: 20,color:'rgba(223, 249, 251,0.7)'}}>{list}</li>
                           })
                         }
                       </ul>
                       <div>
-                        <h4 style={{textAlign: 'center',marginTop: 80,color: APP_COLORS.primaryText, fontWeight: 300}}>Compétences :</h4>
+                        <h4 style={{textAlign: 'center',color: APP_COLORS.primaryText, fontWeight: 300}}>Compétences :</h4>
                         <div style={{display: 'flex', justifyContent: 'center'}}>
                       {
                           this.props.skill.map(list => {

@@ -4,12 +4,17 @@ import {APP_COLORS} from '../../Style/Colors'
 
 import Popup from './Popup'
 
-import monon from './img/mont.jpg';
 import appCalc from './img/appCalc.png';
 import cat from './img/cat.jpeg';
 import mil from './img/mil.jpeg';
+import edt from './img/edt.jpg';
+import portfolio from './img/portfolio.png';
+import portB from './img/portB.jpg';
 
-import phone from './img/phone.png'
+import mathApp from './img/mathApp.gif'
+import ed4App from './img/ed4App.gif'
+import edtB from './img/edtB.jpg'
+import mileB from './img/mileB.jpg'
 
 
 class Project extends React.Component {
@@ -18,62 +23,61 @@ class Project extends React.Component {
     const pop = [
       {
         title:'Application mobile Mathématique',
-        skill:['Laravel', 'VueJS', 'React Native'],
+        skill:['Maths', 'React Native'],
         icon:appCalc,
-        resumer:'"MathsCalculator" est une application mobile que j\'ai développé afin de pouvoir gagner du temps lors de certains calculs de math tel que le PGCD mais également l\'Exponentiel rapide et pour finir une calculatrice classique L\'application est acutellement disponible sur l\'expo store : https://expo.io/@theogu/maths',
-        linkDemo:'https://github.com/TheoGU/mathsCalculator',
-        linkSource:'rfrfrrf',
-        backgroundImagePreview: phone,
-        obj:['one','two','three'],
+        resumer:'"MathsCalculator" est une application mobile que j\'ai développé afin de pouvoir gagner du temps lors de certains calculs de math tel que le PGCD mais également l\'Exponentiel rapide et pour finir une calculatrice classique.',
+        linkDemo:'https://expo.io/@theogu/maths',
+        linkSource:'https://github.com/TheoGU/mathsCalculator',
+        backgroundImagePreview: mathApp,
+        obj:['Interface d\'une calculatrice','Interface pour obtenir de PGCD','Interface pour obtenir Exponentiel Rapide'],
         private: false
 
       },
       {
         title:'Eden des 4 pattes',
-        skill:['Laravel', 'VueJS', 'React Native'],
+        skill:['Laravel', 'VueJS', 'React Native', 'Lumen'],
         icon:cat,
         resumer:"L'Eden des 4 pattes est un hôtel 100% félins, pour les personnes qui ne savent pas où placer leur chat lors de départs en vacances, en week end ou encore pendant leur journée de travail. Notre objectifs, se connecter sur son compte client pour voir en photo ou en vidéo son chat dans l'hôtel. La réservation en ligne avec une possibilité de payement (carte bleue, Paypal, ….) : Stripe, Paypal. Le forum de discussions pour que les propriétaires discutent entre eux et avec le personnel",
-        linkDemo:'https://www.facebook.com',
-        linkSource:'de',
-        backgroundImagePreview: phone,
-        obj:['one','two','three'],
-        private: false
+        linkDemo:'',
+        linkSource:'',
+        backgroundImagePreview: ed4App,
+        obj:['Se connecter sur son compte client pour voir en photo ou en vidéo son chat dans l\'hôtel','La réservation en ligne avec une possibilité de payement (carte bleue, Paypal, ….)','Le forum de discussions pour que les propriétaires discutent entre eux et avec le personnel'],
+        private: true
 
       },
       {
-        title:'troi',
-        skill:['Laravel', 'VueJS', 'React Native'],
+        title:'Plus ou Moins ?',
+        skill:['Electron', 'HTML', 'CSS', 'Javascript'],
         icon:mil,
-        resumer:'Lorem ipsumnt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        linkDemo:'javascript:void(0);',
+        resumer:'Jeux du juste prix sous forme d\'application bureautique.',
+        linkDemo:'',
         linkSource:'',
-        backgroundImagePreview: phone,
-        obj:['one','two','three'],
+        backgroundImagePreview: mileB,
+        obj:['Interface joyeuse','Nombre de coup','Commande de triche'],
+        private: true
+      },
+      {
+        title:'One time to work',
+        skill:['Phalcon', 'React JS', 'Node JS', 'MySQL'],
+        icon:edt,
+        resumer:'Emploi du temps pour déterminer le temps de travail dans une journée afin d\'optimiser sont temps de production',
+        linkDemo:'',
+        linkSource:'',
+        backgroundImagePreview: edtB,
+        obj:['Graphe dynamique','Gestion du temps','Notifications'],
         private: true
 
       },
       {
-        title:'quatre',
-        skill:['Laravel', 'VueJS', 'React Native'],
-        icon:monon,
-        resumer:'lit anim id est laborum.',
-        linkDemo:'javascript:void(0);',
-        linkSource:'',
-        backgroundImagePreview: phone,
-        obj:['one','two','three'],
-        private: true
-
-      },
-      {
-        title:'cinq',
-        skill:['Laravel', 'VueJS', 'React Native'],
-        icon:monon,
-        resumer:'iquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        linkDemo:'javascript:void(0);',
-        linkSource:'f',
-        backgroundImagePreview: phone,
-        obj:['one','two','three'],
-        private: true
+        title:'Mon portfolio',
+        skill:['React JS', 'React Native'],
+        icon:portB,
+        resumer:'Mon portfolio représente ma vie en tant que développeur autodidacte. Une application mobile sera bientôt disponible sur l\'expo store !',
+        linkDemo:'https://www.theoguinebertier.com',
+        linkSource:'https://github.com/TheoGU/Portfolio',
+        backgroundImagePreview: portfolio,
+        obj:['Claire','Simple','Intuitif'],
+        private: false
 
       },
     ]

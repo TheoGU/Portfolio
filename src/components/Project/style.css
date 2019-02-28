@@ -47,6 +47,7 @@
   left:840px;
   top:-17px;
   font-size: 22px;
+  outline: none;
 }
 .close:hover{
   border: 1px solid black;
