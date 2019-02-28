@@ -5,7 +5,7 @@ const InfoTimeline = (props) => {
     <div style={styles.info}>
       <div className="one" style={styles.rect}>
         <div style={{paddingLeft: 10}}>
-          <p>CCE Banque de france | <strong>Paris</strong></p>
+          <p>CCE Banque de France | <strong>Paris</strong></p>
           <p>Alternant pendant 2 ans en tant que Développeur web <strong>full-stack</strong></p>
           <p><strong>Langages :</strong> JavaScript, HTML ,CSS, PHP, SQL</p>
           <p><strong>CMS :</strong> CyberCe</p>

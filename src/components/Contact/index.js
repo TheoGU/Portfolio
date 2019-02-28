@@ -27,7 +27,7 @@ class Contact extends Component{
       this.setState({
         message:false,
         messageErreur: true,
-        msgContent: `Informations manquante !`
+        msgContent: `Informations manquantes !`
       })
     }
   }
@@ -44,10 +44,10 @@ class Contact extends Component{
             <label htmlFor="mail">Votre email</label>
             <input value={this.state.email} onChange={event=>this.setState({email: event.target.value})} id="mail" style={{margin:10}} placeholder="Entrer votre mail" type="text"/>
 
-          <label htmlFor="objet">Un obejt(Recurtement, Projet)</label>
-            <input value={this.state.object} onChange={event=>this.setState({object: event.target.value})} id="objet" style={{margin:10}} placeholder="Entrer un objet" type="text"/>
+          <label htmlFor="objet">Un objet ?</label>
+            <input value={this.state.object} onChange={event=>this.setState({object: event.target.value})} id="objet" style={{margin:10}} placeholder="Entrer un objet (Recurtement, Projet..)" type="text"/>
 
-        <label htmlFor="subject">Ecriver votre demande</label>
+        <label htmlFor="subject">Ecrivez votre demande</label>
           <textarea value={this.state.subject} onChange={event=>this.setState({subject: event.target.value})} cols="50" rows="1" placeholder="Ecrivez votre demande"></textarea>
           <input type="submit" value="Envoyer" onClick={() => this.handleClick()}/>
           </form>

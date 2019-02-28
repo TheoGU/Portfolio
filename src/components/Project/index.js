@@ -29,7 +29,7 @@ class Project extends React.Component {
         linkDemo:'https://expo.io/@theogu/maths',
         linkSource:'https://github.com/TheoGU/mathsCalculator',
         backgroundImagePreview: mathApp,
-        obj:['Interface d\'une calculatrice','Interface pour obtenir de PGCD','Interface pour obtenir Exponentiel Rapide'],
+        obj:['Interface d\'une calculatrice','Interface pour obtenir le PGCD','Interface pour obtenir l\'Exponentiel Rapide'],
         private: false
 
       },
@@ -60,7 +60,7 @@ class Project extends React.Component {
         title:'One time to work',
         skill:['Phalcon', 'React JS', 'Node JS', 'MySQL'],
         icon:edt,
-        resumer:'Emploi du temps pour déterminer le temps de travail dans une journée afin d\'optimiser sont temps de production',
+        resumer:'Emploi du temps pour déterminer le temps de travail dans une journée afin d\'optimiser son temps de production',
         linkDemo:'',
         linkSource:'',
         backgroundImagePreview: edtB,
