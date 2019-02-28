@@ -17,48 +17,63 @@ class Project extends React.Component {
   render() {
     const pop = [
       {
-        title:'un',
-        content:'premier',
+        title:'Application mobile Mathématique',
+        skill:['Laravel', 'VueJS', 'React Native'],
         icon:appCalc,
-        resumer:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        link:'https://www.google.com',
-        backGroundImgApercu: phone
+        resumer:'"MathsCalculator" est une application mobile que j\'ai développé afin de pouvoir gagner du temps lors de certains calculs de math tel que le PGCD mais également l\'Exponentiel rapide et pour finir une calculatrice classique L\'application est acutellement disponible sur l\'expo store : https://expo.io/@theogu/maths',
+        linkDemo:'https://github.com/TheoGU/mathsCalculator',
+        linkSource:'rfrfrrf',
+        backgroundImagePreview: phone,
+        obj:['one','two','three'],
+        private: false
 
       },
       {
-        title:'deux',
-        content:'deuxieme',
+        title:'Eden des 4 pattes',
+        skill:['Laravel', 'VueJS', 'React Native'],
         icon:cat,
-        resumer:'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        link:'https://www.facebook.com',
-        backGroundImgApercu: phone
+        resumer:"L'Eden des 4 pattes est un hôtel 100% félins, pour les personnes qui ne savent pas où placer leur chat lors de départs en vacances, en week end ou encore pendant leur journée de travail. Notre objectifs, se connecter sur son compte client pour voir en photo ou en vidéo son chat dans l'hôtel. La réservation en ligne avec une possibilité de payement (carte bleue, Paypal, ….) : Stripe, Paypal. Le forum de discussions pour que les propriétaires discutent entre eux et avec le personnel",
+        linkDemo:'https://www.facebook.com',
+        linkSource:'de',
+        backgroundImagePreview: phone,
+        obj:['one','two','three'],
+        private: false
 
       },
       {
         title:'troi',
-        content:'troisieme',
+        skill:['Laravel', 'VueJS', 'React Native'],
         icon:mil,
         resumer:'Lorem ipsumnt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        link:'https://theoguinebertier.com/',
-        backGroundImgApercu: phone
+        linkDemo:'javascript:void(0);',
+        linkSource:'',
+        backgroundImagePreview: phone,
+        obj:['one','two','three'],
+        private: true
 
       },
       {
         title:'quatre',
-        content:'quatrieme',
+        skill:['Laravel', 'VueJS', 'React Native'],
         icon:monon,
         resumer:'lit anim id est laborum.',
-        link:'https://www.data.theoguinebertier.com',
-        backGroundImgApercu: phone
+        linkDemo:'javascript:void(0);',
+        linkSource:'',
+        backgroundImagePreview: phone,
+        obj:['one','two','three'],
+        private: true
 
       },
       {
         title:'cinq',
-        content:'cinquieme',
+        skill:['Laravel', 'VueJS', 'React Native'],
         icon:monon,
         resumer:'iquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        link:'http://www.guinebertier.com/',
-        backGroundImgApercu: phone
+        linkDemo:'javascript:void(0);',
+        linkSource:'f',
+        backgroundImagePreview: phone,
+        obj:['one','two','three'],
+        private: true
 
       },
     ]
@@ -69,7 +84,18 @@ class Project extends React.Component {
           <div style={styles.content}>
           {
             pop.map( elt => (
-              <Popup key={elt.title} title={elt.title} content={elt.content} icon={elt.icon} resumer={elt.resumer} link={elt.link}/>
+              <Popup
+                key={elt.title}
+                obj={elt.obj}
+                title={elt.title}
+                skill={elt.skill}
+                icon={elt.icon}
+                resumer={elt.resumer}
+                linkDemo={elt.linkDemo}
+                linkSource={elt.linkSource}
+                private={elt.private}
+                backgroundImagePreview={elt.backgroundImagePreview}
+                />
             )
           )
           }
@@ -88,7 +114,6 @@ const styles = {
     minHeight: `100vh`,
     justifyContent:'center',
     alignItems:'flex-start',
-
   },
 
   content:{
@@ -98,15 +123,14 @@ const styles = {
     alignContent:'center',
     paddingLeft:50,
     paddingRight:50,
-    flexWrap:'wrap'
-
+    flexWrap:'wrap',
   },
   text:{
     color: APP_COLORS.primaryText,
     marginTop: 130,
     marginBottom: -100,
     fontFamily:'sans-serif',
-    fontWeight:100
+    fontWeight:100,
   }
 
 

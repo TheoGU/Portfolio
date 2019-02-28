@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Modal from 'react-awesome-modal';
 import '../style.css'
 
+import {APP_COLORS} from '../../../Style/Colors'
 
 
 export default class Popup extends Component {
@@ -9,6 +10,7 @@ export default class Popup extends Component {
         super(props);
         this.state = {
             visible : false,
+            private: false,
         }
     }
 
@@ -16,6 +18,19 @@ export default class Popup extends Component {
         this.setState({
             visible : true
         });
+    }
+
+    handleClick() {
+      if(this.props.private){
+        this.setState({
+          private: true
+        })
+      }
+      else{
+        this.setState({
+          private: false
+        })
+      }
     }
 
     closeModal() {
@@ -56,16 +71,46 @@ export default class Popup extends Component {
                 >
                     <div className="modal">
                       <div className="modalPicture">
-                        <div style={{flex:3, width: `60%`, height: `60%`,border:`1px solid red`,backgroundImage:`url(${this.props.backGroundImgApercu})` , borderRadius: 20, marginTop: 20}}/>
+                        <div style={{flex:3, width: `60%`, height: `60%`,backgroundImage:`url(${this.props.backgroundImagePreview})`,backgroundSize:'cover',backgroundPosition:'center' , borderRadius: 20, marginTop: 20}}/>
                         <div style={{flex:1,marginTop: 20}}>
-                          <a target="_blank" rel="noopener noreferrer" href={this.props.link}>Voir le projet</a>
+                          <div style={{display: 'flex', flexDirection: 'column'}}>
+
+                            {
+                              this.props.linkDemo != '' ? <a style={{color:APP_COLORS.customText, textDecoration: 'underline', fontStyle: 'italic'}} target="_blank" rel="noopener noreferrer" href={this.props.link} onClick={() => this.handleClick()} >Voir la Démonstration</a> : ''
+                            }
+                            {
+                              this.props.linkSource != '' ? <a style={{color:APP_COLORS.customText, textDecoration: 'underline', fontStyle: 'italic'}} target="_blank" rel="noopener noreferrer" href={this.props.link} onClick={() => this.handleClick()} >Voir les sources </a> : ''
+                            }
+                            {
+                              this.state.private ? <p style={styles.errorMsg}>Projet privée !<br/>Bientôt disponible au grand public</p> : ''
+                            }
+                          </div>
                         </div>
                     </div>
-                      <div className="modalResume">
-                        <h1>{this.props.title}</h1>
-                        <em>{this.props.content}</em>
-                        <p>{this.props.resumer}</p>
+
+
+                    <div className="modalResume" style={{padding: 20}}>
+                      <h1 style={{textAlign: 'center',color: APP_COLORS.primaryText, fontWeight: 200}}>{this.props.title}</h1>
+                      <p style={{textAlign: 'center', color:'rgba(223, 249, 251,0.7)'}}>{this.props.resumer}</p>
+                      <ul style={{marginTop: 80}}>
+                        <h4 style={{color: APP_COLORS.primaryText, fontWeight: 300}}>Objectifs principaux</h4>
+                        {
+                          this.props.obj.map(list => {
+                            return <li style={{listStyle:'none', marginLeft: 20,color:'rgba(223, 249, 251,0.7)'}}>{list}</li>
+                          })
+                        }
+                      </ul>
+                      <div>
+                        <h4 style={{textAlign: 'center',marginTop: 80,color: APP_COLORS.primaryText, fontWeight: 300}}>Compétences :</h4>
+                        <div style={{display: 'flex', justifyContent: 'center'}}>
+                      {
+                          this.props.skill.map(list => {
+                            return <i style={{textAlign: 'center',backgroundColor: 'rgba(37, 204, 247,0.5)', margin:5, borderRadius: 20, padding:5}}>{list}</i>
+                          })
+                        }
                       </div>
+                      </div>
+                    </div>
                         <button className="close" onClick={() => this.closeModal()}>x</button>
                     </div>
                 </Modal>
@@ -73,4 +118,14 @@ export default class Popup extends Component {
         );
     }
 
+}
+
+const styles = {
+  errorMsg:{
+    backgroundColor: 'rgba(46, 204, 113,0.7)',
+    color: APP_COLORS.primaryText,
+    borderRadius: 5,
+    padding: 20,
+    border: `1px solid rgba(46, 204, 113,1.0)`
+  }
 }
